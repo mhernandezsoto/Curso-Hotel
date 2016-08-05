@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hotel Cometa</title>
+        <meta name="description" content="Disfruta de tus vacaciones con nosotros">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body ontouchstart="">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <div id="logo"><h1><img src="img/logo_cometa.png" alt='Logo del hotel'></h1></div>
+            <div id="navigation">
+                <nav class="callig">
+                    <ul id="navegacionPrincipal">
+                        <li><a href="#index">Inicio</a></li>
+                        <li><a href="#costos">Costos</a></li>
+                        <li><a href="#cuartos">Cuartos</a></li>
+                        <li><a href="#contacto">Contacto y Reservaciones</a></li>
+                        <li><a href="#buffet">Buffet</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="slider_container fullScreen">
+            <div class="slideContainer">
+                <div class="slide fullScreen" data-background="img/DSCF0302"></div>
+                <div class="slide fullScreen" data-background="img/DSCF0303"></div>
+                <div class="slide fullScreen" data-background="img/DSCF0308"></div>
+                <div class="slide fullScreen" data-background="img/DSCN1592"></div>
+            </div>
+        </div>
+        <section class="fullScreen" id='index'>
+            <div class='mensajePrincipal'>
+                <p class='triangle'><span>Desde USD 300,00 por noche</span></p>
+                <h2>Un lugar para disfrutar y relajarse</h2>
+                <p>Cancún, México</p>
+            </div>
+        </section>
+        <section id='cuartos' class="fullScreen">
+            <h1 class="centerCircle callig">El mejor servicio</h1>
+            <div class="half halfRooms">
+                <img src="img/DSCF0037.jpg">
+            </div>
+            <div class="half halfRooms">
+                <img src="img/DSCN1127.jpg">
+            </div>
+        </section>
+        <script type=" text/x-jquery-tmpl" id='precioTemplate'>
+            <div>
+                <div class="ribbon"></div>
+                <h3>${paquete}</h3>
+                <p><strong>Contenido del paquete</strong></p>
+                <ol>
+                    {{each opciones}}
+                        <li>${opcion}</li>
+                    {{/each}}
+                </ol>
+                <p class="costo">${costo}</p>
+                <a id='regresar-ventana'>Regresar</a>
+            </div>
+        </script>
+        <section id='costos' class="fullScreen callig" data-stellar-background-ratio="0.5">
+            <div class="marginTop">
+                <div class="precio" data-stellar-ratio="2.09">
+                    <div class="ribbon"></div>
+                    <h3>Paquete S</h3>
+                    <p>Disfrute de nuestro paquete S, perfecto para vacaciones improvisadas donde el presupuesto es limitado.</p>
+                    <p class="costo">USD 300,00</p>
+                    <a class="ver-mas" data-number='0'>Conoce más del paquete</a>
+                </div>
+                <div class="precio" data-stellar-ratio="1.5" data-stellar-vertical-offset="2280">
+                    <div class="ribbon"></div>
+                    <h3>Paquete M</h3>
+                    <p>Disfrute de nuestro paquete M, ideal para esas reponedoras vacaciones después de un arduo año de trabajo.</p>
+                    <p class="costo">USD 500,00</p>
+                    <a class="ver-mas" data-number='1'>Conoce más del paquete</a>
+                </div>
+                <div class="precio" data-stellar-ratio="3" data-stellar-vertical-offset="-877.5">
+                    <div class="ribbon"></div>
+                    <h3>Paquete L</h3>
+                    <p>Disfrute de nuestro paquete L, donde las vacaciones pasan a ser toda una experiencia de vida.</p>
+                    <p class="costo">USD 1000,00</p>
+                    <a class="ver-mas" data-number='2'>Conoce más del paquete</a>
+                </div>
+            </div>
+        </section>
+        <section id="buffet" class="fullScreen">
+            <div class="image_food viewport" data-background="img/DSCF0330"></div>
+            <div class="image_food" data-background="img/DSCF0311"></div>
+            <div class="image_food" data-background="img/DSCF0371"></div>
+            <div class="image_food" data-background="img/DSCF0330"></div>
+        </section>
+        <section class="fullScreen" id="contacto" data-stellar-background-ratio="0.2">
+            <div class="marginTop callig">
+                <h1>Contacto</h1>
+                <div class="half">
+                    <h3>Redes sociales</h3>
+                    <span class="social">F</span> <span class="social">O</span> <span class="social">X</span>
+                    <h3>Dirección & Teléfono</h3>
+                    <p>Cornelio Saavedra 325</p>
+                    <p>+56 452 223 892</p>
+                </div>
+                <div class="half">
+                    <div id="google_canvas" data-stellar-ratio="2.0575"></div>
+                </div>         
+            </div>
+        </section>
+        <script src="http://maps.googleapis.com/maps/api/js?&sensor=true">
+        </script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery.ui.core.min.js"></script>
+        <script src="js/jquery.ui.effect.min.js"></script>
+        <script src="js/jquery.flip.min.js"></script>
+        <script src="js/scrollto.min.js"></script>
+        <script src="js/localscroll.min.js"></script>
+        <script src="js/stellar.min.js"></script>
+        <script src="js/jquery.scrollorama.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
